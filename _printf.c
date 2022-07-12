@@ -17,30 +17,32 @@ int _printf(const char *format, ...)
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
-		{	
+		{
 			count += count + _putchar(format[i]);
 			i++;
 		}
-		else if (format[i] == '%' && format[i+1] != ' ');
+		else if (format[i] == '%' && format[i + 1] != ' ');
 		{
-			switch (format[i+1])
+			switch(format[i + 1])
 			{
 				case 'c':
 					count += _putchar(va_arg (data, int));
 				break;
 			}
-			case 's':
 			{
+				case 's':
+			
 					count += _putchar(va_arg (data, char * ));
-			break;
+				break;
 			}
-			case '%':
 			{
+				case '%':
+			
 					count += _putchar('%');
 				break;
 			}
-			defualt:
-			break;
+				defualt:
+				break;
 		}
 			
 	}
