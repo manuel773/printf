@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 				break;
 			}
 		defualt:
-		break;
+			break;
 		}
 
 	}
