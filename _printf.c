@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 			count += count + _putchar(format[i]);
 			i++;
 		}
-		else if (format[i] == '%' && format[i + 1] != ' ');
+		else if (format[i] == '%' && format[i + 1] != ' ')
 		{
 		switch (format[i + 1])
 			{
@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 			}
 			{
 				case 's':
-					count += _putchar(va_arg (data, char *));
+					count += _putchar(va_arg(data, char *));
 				break;
 			}
 			{
@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 				break;
 			}
 		defualt:
-			break;
+		break;
 		}
 
 	}
