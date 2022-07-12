@@ -23,28 +23,26 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && format[i + 1] != ' ');
 		{
-			switch(format[i + 1])
+		switch (format[i + 1])
 			{
 				case 'c':
-					count += _putchar(va_arg (data, int));
+					count += _putchar(va_arg(data, int));
 				break;
 			}
 			{
 				case 's':
-			
-					count += _putchar(va_arg (data, char * ));
+					count += _putchar(va_arg (data, char *));
 				break;
 			}
 			{
 				case '%':
-			
 					count += _putchar('%');
 				break;
 			}
-				defualt:
-				break;
+		defualt:
+			break;
 		}
-			
+
 	}
-	return (count);	
+	return (count);
 }
