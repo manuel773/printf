@@ -3,13 +3,15 @@
 #include "main.h"
 
 /**
- * _printf -> prints a given 
+ * _printf -> prints a given
  * Return: return number of characters
  */
 int _printf(const char *format, ...)
 {
 	int count_character = 0, count = 0, i;
+
 	va_list data;
+
 	va_start(data, format);
 
 	for (i = 0; format[i] != '\0'; i++)
