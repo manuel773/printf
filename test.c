@@ -38,7 +38,7 @@ int main(void)
 
 {                                                                                                                                                                                     
 
-	int n = printf("Hello me %c", 'H');                                                                                                                                                   
+	int n = printf("Hello me %c %s %%", 'H', "Hakeem");                                                                                                                                                   
 
 	printf("\nn = %d \n", n);                                                                                                                                                             
 
