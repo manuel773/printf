@@ -40,5 +40,6 @@ int _printf(const char *format, ...)
 				}
 			i += 2;
 		}
-	return (count);
-	}
+
+		return (count);
+}
