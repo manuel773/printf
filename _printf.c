@@ -25,19 +25,19 @@ int _printf(const char *format, ...)
 		{
 			switch (format[i + 1])
 				{
-					case 'c':
-						count += _putchar(va_arg(data, int));
+				case 'c':
+					count += _putchar(va_arg(data, int));
 					break;
-					case 's':
-						count += _putchar(va_arg(data, char *));
+				case 's':
+					count += _putchar(va_arg(data, char *));
 					break;
-
-					case '%':
-						count += _putchar('%');
+				case '%':
+					count += _putchar('%');
 					break;
-				
-				}
-			i += 2 ;
+			default:
+				break;
+			}
+		i += 2;
 	}
 	return (count);
 }
