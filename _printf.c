@@ -4,6 +4,7 @@
 
 /**
  * _printf -> prints a given
+ * @format: parametr
  * Return: return number of characters
  */
 int _printf(const char *format, ...)
