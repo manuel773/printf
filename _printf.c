@@ -39,8 +39,8 @@ int _printf(const char *format, ...)
 					count += _putchar('%');
 				break;
 			}
-		defualt:
-			break;
+				defualt:
+					break;
 		}
 
 	}
