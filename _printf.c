@@ -8,7 +8,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int count_character = 0, count = 0, i;
+	int count = 0, i;
 
 	va_list data;
 
@@ -23,26 +23,21 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && format[i + 1] != ' ')
 		{
-		switch (format[i + 1])
-			{
-				case 'c':
-					count += _putchar(va_arg(data, int));
-				break;
-			}
-			{
-				case 's':
-					count += _putchar(va_arg(data, char *));
-				break;
-			}
-			{
-				case '%':
-					count += _putchar('%');
-				break;
-			}
-				defualt:
+			switch (format[i + 1])
+				{
+					case 'c':
+						count += _putchar(va_arg(data, int));
 					break;
-		}
+					case 's':
+						count += _putchar(va_arg(data, char *));
+					break;
 
+					case '%':
+						count += _putchar('%');
+					break;
+				
+				}
+			i += 2 ;
 	}
 	return (count);
 }
