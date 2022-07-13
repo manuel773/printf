@@ -4,6 +4,7 @@
  * print_decimal -> prints the decimal
  *value: the value to be displayed
  * Return:returns the value
+ */
 int print_decimal(int value)
 {
 	int count = 0;
